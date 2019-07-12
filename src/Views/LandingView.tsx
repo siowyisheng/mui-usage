@@ -1,8 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
 import React, { useEffect, useState } from 'react'
-import red from '@material-ui/core/colors/red'
-import sample from 'lodash/sample'
 import {
   Button as MuiButton,
   Color,
@@ -42,17 +40,17 @@ const cards = [
   {
     title: 'Overview',
     description: 'Understanding Material UI from a broader perspective.',
-    path: '/overview/'
+    path: '/mui-usage/overview/'
   },
   {
     title: 'Nested Selectors',
     description: 'One easy way to style elements within MuiComponents.',
-    path: '/nested-selectors/'
+    path: '/mui-usage/nested-selectors/'
   },
   {
     title: 'Styles from props',
     description: 'Create dynamic styles using props.',
-    path: '/styles-from-props/'
+    path: '/mui-usage/styles-from-props/'
   }
 ]
 
@@ -92,7 +90,9 @@ const LandingView: React.FC = () => {
         {cards.map(card => (
           <Card className={classes.card}>
             <CardContent>
-              <Typography gutterBottom>{card.title}</Typography>
+              <Typography color='primary' gutterBottom>
+                {card.title}
+              </Typography>
               <Typography variant='body2' component='p'>
                 {card.description}
               </Typography>
@@ -103,7 +103,9 @@ const LandingView: React.FC = () => {
                 to={card.path}
                 css={{ textDecoration: 'none' }}
               >
-                <MuiButton size='small'>Learn</MuiButton>
+                <MuiButton color='primary' size='small'>
+                  Learn
+                </MuiButton>
               </Link>
             </CardActions>
           </Card>

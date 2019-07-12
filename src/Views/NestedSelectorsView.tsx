@@ -31,18 +31,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   }
 }))
 
-const cards = [
-  {
-    title: 'Nested Selectors',
-    description: 'One easy way to style elements within MuiComponents.'
-  },
-  {
-    title: 'Styles from props',
-    description: 'Create dynamic styles using props.'
-  }
-]
-
-const LandingView: React.FC = () => {
+const NestedSelectorsView: React.FC = () => {
   const classes = useStyles()
   const theme = useTheme()
   console.log(theme)
@@ -81,4 +70,4 @@ const LandingView: React.FC = () => {
     </div>
   )
 }
-export default LandingView
+export default NestedSelectorsView

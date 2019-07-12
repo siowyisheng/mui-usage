@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
 import React from 'react'
-import { Typography, AppBar, Toolbar } from '@material-ui/core'
+import { Typography, Box } from '@material-ui/core'
 import { BrowserRouter, Route, Link } from 'react-router-dom'
 import { ThemeProvider } from '@material-ui/styles'
 import { theme as customTheme } from './theme'
@@ -22,15 +22,36 @@ const App: React.FC = () => {
   return (
     <BrowserRouter>
       <ThemeProvider theme={customTheme}>
-        <AppBar position='fixed' color='primary'>
-          <Toolbar>
-            <Link to='/' css={{ color: 'inherit', textDecoration: 'none' }}>
-              <Typography variant='h6'>Material UI Usage</Typography>
-            </Link>
-          </Toolbar>
-        </AppBar>
-        <Route path='/' exact component={LandingView} />
-        <Route path='/nested-selectors/' component={NestedSelectorsView} />
+        <Box
+          position='fixed'
+          display='flex'
+          width={1}
+          height={64}
+          justifyContent='center'
+          alignItems='center'
+          boxShadow={1}
+        >
+          <Link
+            to='/mui-usage/'
+            css={{
+              display: 'inherit',
+              color: 'inherit',
+              textDecoration: 'none'
+            }}
+          >
+            <img
+              css={{ marginRight: 16 }}
+              alt='logo'
+              src='/favicon-32x32.png'
+            />
+            <Typography variant='h6'>Material UI Usage</Typography>
+          </Link>
+        </Box>
+        <Route path='/mui-usage/' exact component={LandingView} />
+        <Route
+          path='/mui-usage/nested-selectors/'
+          component={NestedSelectorsView}
+        />
       </ThemeProvider>
     </BrowserRouter>
   )
