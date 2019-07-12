@@ -18,5 +18,12 @@ export const theme = createMuiTheme({
       primary: '#000',
       secondary: '#fff'
     }
+  },
+  typography: {
+    fontFamily: 'Roboto',
+    caption: {
+      fontFamily: 'Roboto Mono',
+      fontSize: '16px'
+    }
   }
 })

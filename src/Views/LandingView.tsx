@@ -32,6 +32,11 @@ const cards = [
     path: '/mui-usage/overview/'
   },
   {
+    title: 'Important Components',
+    description: 'Some components are more common and important than others.',
+    path: '/mui-usage/important-components/'
+  },
+  {
     title: 'Nested Selectors',
     description: 'One easy way to style elements within MuiComponents.',
     path: '/mui-usage/nested-selectors/'
@@ -50,15 +55,12 @@ const LandingView: React.FC = () => {
   return (
     <div
       css={{
-        minHeight: '100vh',
         display: 'flex',
         alignItems: 'center',
-        flexWrap: 'wrap',
-        flexDirection: 'column',
-        fontSize: 'calc(10px + 2vmin)'
+        flexDirection: 'column'
       }}
     >
-      <div css={{ display: 'flex', flexWrap: 'wrap', marginTop: 64 }}>
+      <div css={{ display: 'flex', flexWrap: 'wrap' }}>
         {cards.map(card => (
           <Card className={classes.card}>
             <CardContent>
