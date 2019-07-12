@@ -1,28 +1,17 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import {
   Button as MuiButton,
-  Color,
-  Paper,
   Theme,
   Typography,
   Card,
   CardContent,
   CardActions,
   useTheme,
-  AppBar,
-  Toolbar,
   Link
 } from '@material-ui/core'
-import Button from '../Button'
-import {
-  BrowserRouter as Router,
-  Route,
-  Link as RouterLink
-} from 'react-router-dom'
-import NestedSelector from '../NestedSelector'
-import { StylesFromProps } from '../StylesFromProps'
+import { Link as RouterLink } from 'react-router-dom'
 import { makeStyles } from '@material-ui/styles'
 
 const useStyles = makeStyles((theme: Theme) => ({
@@ -52,23 +41,6 @@ const cards = [
     description: 'Create dynamic styles using props.',
     path: '/mui-usage/styles-from-props/'
   }
-]
-
-const possibleShades = [
-  '50',
-  '100',
-  '200',
-  '300',
-  '400',
-  '500',
-  '600',
-  '700',
-  '800',
-  '900',
-  'A100',
-  'A200',
-  'A400',
-  'A700'
 ]
 
 const LandingView: React.FC = () => {

@@ -5,8 +5,9 @@ import { Typography, Box } from '@material-ui/core'
 import { BrowserRouter, Route, Link } from 'react-router-dom'
 import { ThemeProvider } from '@material-ui/styles'
 import { theme as customTheme } from './theme'
-import LandingView from './Views/LandingView'
-import NestedSelectorsView from './Views/NestedSelectorsView'
+import LandingView from './views/LandingView'
+import NestedSelectorsView from './views/NestedSelectorsView'
+import logo from './static/mui-small-logo.png'
 
 const App: React.FC = () => {
   // const [shade, setShade] = useState<keyof Color>(500)
@@ -39,11 +40,7 @@ const App: React.FC = () => {
               textDecoration: 'none'
             }}
           >
-            <img
-              css={{ marginRight: 16 }}
-              alt='logo'
-              src='/favicon-32x32.png'
-            />
+            <img css={{ marginRight: 16 }} alt='logo' src={logo} />
             <Typography variant='h6'>Material UI Usage</Typography>
           </Link>
         </Box>
