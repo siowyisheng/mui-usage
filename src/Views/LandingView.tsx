@@ -8,15 +8,18 @@ import {
   Card,
   CardContent,
   CardActions,
-  useTheme,
-  Link
+  Link,
+  Paper,
+  Button,
+  Box,
+  Container
 } from '@material-ui/core'
 import { Link as RouterLink } from 'react-router-dom'
 import { makeStyles } from '@material-ui/styles'
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
-    padding: 16,
+    padding: 32,
     maxWidth: 600
   },
   card: {
@@ -32,9 +35,9 @@ const cards = [
     path: '/mui-usage/overview/'
   },
   {
-    title: 'Important Components',
-    description: 'Some components are more common and important than others.',
-    path: '/mui-usage/important-components/'
+    title: 'Box',
+    description: 'A super-convenient div element.',
+    path: '/mui-usage/box/'
   },
   {
     title: 'Nested Selectors',
@@ -50,16 +53,39 @@ const cards = [
 
 const LandingView: React.FC = () => {
   const classes = useStyles()
-  const theme = useTheme()
-  console.log(theme)
   return (
     <div
       css={{
         display: 'flex',
         alignItems: 'center',
-        flexDirection: 'column'
+        flexDirection: 'column',
+        paddingTop: 32,
+        paddingBottom: 32
       }}
     >
+      <Paper className={classes.root}>
+        <Typography variant='h2' gutterBottom>
+          Let's Learn
+        </Typography>
+        <Typography variant='body1' gutterBottom>
+          {`I wrote this because there was a better way to learn the usage of
+          Material UI than through `}
+          <Link href='https://material-ui.com/'>the docs</Link>.<br />
+          <br />
+          {`You can also `}
+          <Link href='https://github.com/siowyisheng/mui-usage/'>
+            see my source code
+          </Link>
+          {` for this site.`}
+        </Typography>
+        <Box marginTop={3} display='flex' justifyContent='center'>
+          <Link component={RouterLink} to='/mui-usage/overview/'>
+            <Button color='primary' variant='contained'>
+              Start
+            </Button>
+          </Link>
+        </Box>
+      </Paper>
       <div css={{ display: 'flex', flexWrap: 'wrap' }}>
         {cards.map(card => (
           <Card className={classes.card}>

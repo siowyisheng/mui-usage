@@ -23,7 +23,12 @@ export const theme = createMuiTheme({
     fontFamily: 'Roboto',
     caption: {
       fontFamily: 'Roboto Mono',
-      fontSize: '16px'
+      fontSize: 16,
+      color: '#f44336'
+    },
+    h6: {
+      fontFamily: 'Merriweather Sans',
+      fontSize: '12px'
     }
   }
 })
