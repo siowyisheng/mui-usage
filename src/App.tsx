@@ -68,7 +68,7 @@ const App: React.FC = () => {
   const [mobileOpen, setMobileOpen] = useState(false)
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <ThemeProvider theme={customTheme}>
         <CssBaseline />
         <Box display='flex'>
