@@ -13,22 +13,22 @@ import OtherComponentsView from './views/OtherComponentsView'
 export const mainPages = {
   overview: {
     linkText: 'Overview',
-    path: '/mui-usage/overview/',
+    path: '/overview/',
     component: OverviewView
   },
   box: {
     linkText: 'Box',
-    path: '/mui-usage/box/',
+    path: '/box/',
     component: BoxView
   },
   customizingStyles: {
     linkText: 'Customizing styles',
-    path: '/mui-usage/customizing-styles/',
+    path: '/customizing-styles/',
     component: CustomizingStylesView
   },
   dynamicStyles: {
     linkText: 'Dynamic styles',
-    path: '/mui-usage/dynamic-styles/',
+    path: '/dynamic-styles/',
     component: DynamicStylesView
   }
 }
@@ -36,39 +36,39 @@ export const mainPages = {
 export const componentPages = {
   navigation: {
     linkText: 'Navigation',
-    path: '/mui-usage/navigation/',
+    path: '/navigation/',
     component: NavigationView
   },
   surfaces: {
     linkText: 'Surfaces',
-    path: '/mui-usage/surfaces/',
+    path: '/surfaces/',
     component: SurfacesView
   },
   userInput: {
     linkText: 'User input',
-    path: '/mui-usage/user-input/',
+    path: '/user-input/',
     component: UserInputView
   },
   dataDisplay: {
     linkText: 'Data display',
-    path: '/mui-usage/data-display/',
+    path: '/data-display/',
     component: DataDisplayView
   },
   layout: {
     linkText: 'Layout',
-    path: '/mui-usage/layout/',
+    path: '/layout/',
     component: LayoutView
   },
   otherComponents: {
     linkText: 'Other components',
-    path: '/mui-usage/other-components/',
+    path: '/other-components/',
     component: OtherComponentsView
   }
 }
 
 const landingView = {
   linkText: null,
-  path: '/mui-usage/',
+  path: '/',
   component: LandingView
 }
 
