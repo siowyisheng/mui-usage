@@ -81,7 +81,7 @@ const OverviewView: React.FC = () => {
           .
         </Typography>
         <Box marginTop={3}>
-          <Link component={RouterLink} to='/mui-usage/box/'>
+          <Link component={RouterLink} to='/box/'>
             <Button color='primary' variant='contained'>
               Next: The Box Component
             </Button>

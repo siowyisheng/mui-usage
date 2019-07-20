@@ -69,7 +69,7 @@ const Nav: React.FC<{
       <div className={classes.toolbar}>
         <Link
           component={RouterLink}
-          to='/mui-usage/'
+          to='/'
           css={{
             display: 'inherit',
             alignItems: 'center'

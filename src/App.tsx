@@ -85,7 +85,7 @@ const App: React.FC = () => {
               </IconButton>
               <Link
                 component={RouterLink}
-                to='/mui-usage/'
+                to='/'
                 css={{
                   color: 'inherit',
                   display: 'inherit',
